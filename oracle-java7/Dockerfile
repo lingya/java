@@ -6,7 +6,7 @@
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM lingya/base-ubuntu
 
 # Install Java.
 RUN \
