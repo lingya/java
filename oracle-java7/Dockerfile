@@ -16,7 +16,12 @@ RUN \
   apt-get install -y oracle-java7-installer && \
   rm -rf /var/lib/apt/lists/* && \
   rm -rf /var/cache/oracle-jdk7-installer
-
+  
+RUN apt-get install -qq -y \
+    python2.7-dev \
+    pypy-dev
+run apt-get clean && \
+    rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 # Define working directory.
 WORKDIR /data
 
